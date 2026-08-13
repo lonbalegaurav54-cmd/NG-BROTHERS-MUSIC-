@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NG BROTHERS MUSIC</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#090b10;color:#fff}
+header{padding:28px 18px;text-align:center;background:linear-gradient(135deg,#171a24,#0b0d13);border-bottom:1px solid #292d39}
+.logo{font-size:34px;font-weight:900;letter-spacing:2px;color:#ffcf33}.sub{color:#aeb4c2;margin-top:6px}
+.hero{max-width:1100px;margin:22px auto;padding:28px 18px;text-align:center}
+.hero h1{font-size:42px;margin:5px 0 10px}.hero p{color:#aeb4c2}
+.search{width:min(700px,94%);padding:15px 18px;border-radius:30px;border:1px solid #353a48;background:#151821;color:#fff;font-size:16px;outline:none}
+.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0}
+.tabs button{background:#171a23;color:#ddd;border:1px solid #333846;padding:10px 16px;border-radius:22px;cursor:pointer}
+.tabs button.active,.tabs button:hover{background:#ffcf33;color:#111;border-color:#ffcf33}
+.grid{max-width:1100px;margin:auto;padding:0 18px 50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:#12151d;border:1px solid #292e3b;border-radius:18px;padding:18px;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:#ffcf33}.cover{height:145px;border-radius:13px;background:linear-gradient(135deg,#252a38,#0f1117);display:flex;align-items:center;justify-content:center;font-size:46px}
+.card h3{margin:14px 0 5px}.card p{margin:0 0 14px;color:#9299aa;font-size:14px}
+.play{width:100%;border:0;border-radius:12px;padding:12px;background:#ffcf33;color:#111;font-weight:800;cursor:pointer}
+footer{text-align:center;padding:25px;color:#747b8b;border-top:1px solid #222735}
+.player{position:fixed;left:12px;right:12px;bottom:12px;background:#171a23;border:1px solid #333846;border-radius:16px;padding:12px 15px;display:none;box-shadow:0 10px 35px #0008}
+.player strong{display:block}.player small{color:#9ba2b1}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">NG BROTHERS MUSIC</div>
+  <div class="sub">Music • Playlists • Travel Vibes</div>
+</header>
+
+<section class="hero">
+  <h1>🎵 NG BROTHERS MUSIC</h1>
+  <p>Your own playlist corner — built for mobile, tablet and laptop.</p>
+  <input id="search" class="search" placeholder="🔎 Search playlist..." oninput="filterCards()">
+  <div class="tabs">
+    <button class="active" onclick="filterCat('all',this)">All</button>
+    <button onclick="filterCat('90s',this)">90s Hits</button>
+    <button onclick="filterCat('Marathi',this)">Marathi</button>
+    <button onclick="filterCat('Travel',this)">Travel</button>
+  </div>
+</section>
+
+<main id="grid" class="grid">
+  <article class="card" data-cat="90s" data-name="90s Bollywood Hits">
+    <div class="cover">🎧</div><h3>90s Bollywood Hits</h3><p>Add your own licensed audio files here.</p>
+    <button class="play" onclick="showPlayer('90s Bollywood Hits')">▶ Play Playlist</button>
+  </article>
+  <article class="card" data-cat="Marathi" data-name="Marathi Hits">
+    <div class="cover">🎶</div><h3>Marathi Hits</h3><p>Add your own licensed audio files here.</p>
+    <button class="play" onclick="showPlayer('Marathi Hits')">▶ Play Playlist</button>
+  </article>
+  <article class="card" data-cat="Travel" data-name="Travel / Bus Vibes">
+    <div class="cover">🚌</div><h3>Travel / Bus Vibes</h3><p>Perfect section for your original travel playlist.</p>
+    <button class="play" onclick="showPlayer('Travel / Bus Vibes')">▶ Play Playlist</button>
+  </article>
+  <article class="card" data-cat="Travel" data-name="NG Brothers Special">
+    <div class="cover">⭐</div><h3>NG Brothers Special</h3><p>Your custom featured playlist.</p>
+    <button class="play" onclick="showPlayer('NG Brothers Special')">▶ Play Playlist</button>
+  </article>
+</main>
+
+<div id="player" class="player">
+  <strong id="now">NG BROTHERS MUSIC</strong>
+  <small>Playlist selected — connect your licensed audio files to enable playback.</small>
+</div>
+
+<footer>© 2026 NG BROTHERS MUSIC • Original website</footer>
+
+<script>
+let category='all';
+function filterCards(){
+ const q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('.card').forEach(c=>{
+   const okCat=category==='all'||c.dataset.cat===category;
+   const okText=c.dataset.name.toLowerCase().includes(q);
+   c.style.display=okCat&&okText?'block':'none';
+ });
+}
+function filterCat(cat,btn){
+ category=cat;
+ document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+ btn.classList.add('active'); filterCards();
+}
+function showPlayer(name){
+ document.getElementById('now').textContent='▶ '+name;
+ document.getElementById('player').style.display='block';
+}
+</script>
+</body>
+</html>
