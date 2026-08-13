@@ -2,91 +2,80 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>NG BROTHERS MUSIC</title>
+<meta name="description" content="NG BROTHERS MUSIC - Travel, Bus & Music Vibes">
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#090b10;color:#fff}
-header{padding:28px 18px;text-align:center;background:linear-gradient(135deg,#171a24,#0b0d13);border-bottom:1px solid #292d39}
-.logo{font-size:34px;font-weight:900;letter-spacing:2px;color:#ffcf33}.sub{color:#aeb4c2;margin-top:6px}
-.hero{max-width:1100px;margin:22px auto;padding:28px 18px;text-align:center}
-.hero h1{font-size:42px;margin:5px 0 10px}.hero p{color:#aeb4c2}
-.search{width:min(700px,94%);padding:15px 18px;border-radius:30px;border:1px solid #353a48;background:#151821;color:#fff;font-size:16px;outline:none}
-.tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0}
-.tabs button{background:#171a23;color:#ddd;border:1px solid #333846;padding:10px 16px;border-radius:22px;cursor:pointer}
-.tabs button.active,.tabs button:hover{background:#ffcf33;color:#111;border-color:#ffcf33}
-.grid{max-width:1100px;margin:auto;padding:0 18px 50px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{background:#12151d;border:1px solid #292e3b;border-radius:18px;padding:18px;transition:.2s}
-.card:hover{transform:translateY(-3px);border-color:#ffcf33}.cover{height:145px;border-radius:13px;background:linear-gradient(135deg,#252a38,#0f1117);display:flex;align-items:center;justify-content:center;font-size:46px}
-.card h3{margin:14px 0 5px}.card p{margin:0 0 14px;color:#9299aa;font-size:14px}
-.play{width:100%;border:0;border-radius:12px;padding:12px;background:#ffcf33;color:#111;font-weight:800;cursor:pointer}
-footer{text-align:center;padding:25px;color:#747b8b;border-top:1px solid #222735}
-.player{position:fixed;left:12px;right:12px;bottom:12px;background:#171a23;border:1px solid #333846;border-radius:16px;padding:12px 15px;display:none;box-shadow:0 10px 35px #0008}
-.player strong{display:block}.player small{color:#9ba2b1}
+*{box-sizing:border-box}
+body{margin:0;background:#07090d;color:#fff;font-family:Arial,Helvetica,sans-serif}
+header{position:sticky;top:0;z-index:10;background:rgba(7,9,13,.94);backdrop-filter:blur(12px);border-bottom:1px solid #272b35}
+.nav{max-width:1150px;margin:auto;padding:15px 18px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:900;letter-spacing:1.5px;font-size:21px;color:#ffd43b}
+.badge{font-size:12px;color:#aeb5c4;border:1px solid #303644;border-radius:20px;padding:8px 12px}
+.hero{max-width:1150px;margin:auto;padding:42px 18px 24px}
+.heroBox{position:relative;overflow:hidden;border:1px solid #303542;border-radius:28px;padding:38px 24px;text-align:center;background:radial-gradient(circle at 50% 0,#242a3a,#0e1118 58%,#090b10)}
+.heroBox:before{content:"🚌";position:absolute;font-size:120px;opacity:.08;right:-10px;bottom:-30px;transform:rotate(-5deg)}
+.kicker{color:#ffd43b;font-weight:800;letter-spacing:2px;font-size:13px}
+h1{font-size:clamp(38px,9vw,76px);line-height:.98;margin:13px 0 12px}
+h1 span{color:#ffd43b}
+.hero p{color:#aeb5c4;margin:0 auto 24px;max-width:650px}
+.search{width:min(700px,100%);padding:15px 19px;border-radius:30px;border:1px solid #343a49;background:#151923;color:white;outline:none;font-size:16px}
+.search:focus{border-color:#ffd43b}
+.tabs{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:22px 0 8px}
+.tabs button{border:1px solid #343a49;background:#151923;color:#dfe3eb;border-radius:22px;padding:10px 16px;cursor:pointer}
+.tabs button.active,.tabs button:hover{background:#ffd43b;color:#101216;border-color:#ffd43b}
+.section{max-width:1150px;margin:auto;padding:12px 18px 60px}
+.title{display:flex;justify-content:space-between;align-items:end;margin:18px 0}
+.title h2{margin:0;font-size:24px}.title small{color:#858d9e}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:17px}
+.card{background:linear-gradient(180deg,#151923,#10131a);border:1px solid #2c3240;border-radius:20px;padding:15px;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:#ffd43b}
+.cover{height:155px;border-radius:15px;background:linear-gradient(135deg,#262d3e,#11141b);display:flex;align-items:center;justify-content:center;font-size:58px;box-shadow:inset 0 0 35px #0005}
+.card h3{margin:14px 2px 5px;font-size:18px}.card p{margin:0 2px 14px;color:#8e96a7;font-size:13px}
+.play{width:100%;padding:12px;border:0;border-radius:12px;background:#ffd43b;color:#111;font-weight:900;cursor:pointer}
+.play:active{transform:scale(.98)}
+.player{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:none;background:#171b25;border:1px solid #3b4150;border-radius:18px;padding:14px 16px;box-shadow:0 15px 45px #000b}
+.playerRow{display:flex;align-items:center;gap:12px}.dot{width:42px;height:42px;border-radius:50%;background:#ffd43b;color:#111;display:grid;place-items:center}
+.player strong{display:block}.player small{color:#929aaa}
+footer{text-align:center;padding:28px 18px;color:#70798b;border-top:1px solid #202531;font-size:13px}
 </style>
 </head>
 <body>
-<header>
-  <div class="logo">NG BROTHERS MUSIC</div>
-  <div class="sub">Music • Playlists • Travel Vibes</div>
-</header>
+<header><div class="nav"><div class="brand">NG BROTHERS MUSIC</div><div class="badge">🎧 TRAVEL VIBES</div></div></header>
 
 <section class="hero">
-  <h1>🎵 NG BROTHERS MUSIC</h1>
-  <p>Your own playlist corner — built for mobile, tablet and laptop.</p>
-  <input id="search" class="search" placeholder="🔎 Search playlist..." oninput="filterCards()">
-  <div class="tabs">
-    <button class="active" onclick="filterCat('all',this)">All</button>
-    <button onclick="filterCat('90s',this)">90s Hits</button>
-    <button onclick="filterCat('Marathi',this)">Marathi</button>
-    <button onclick="filterCat('Travel',this)">Travel</button>
-  </div>
+<div class="heroBox">
+<div class="kicker">WELCOME TO</div>
+<h1>NG BROTHERS<br><span>MUSIC</span></h1>
+<p>Bus • Travel • 90s • Marathi — your own music corner.</p>
+<input id="search" class="search" placeholder="🔎 Search playlist..." oninput="filterCards()">
+<div class="tabs">
+<button class="active" onclick="filterCat('all',this)">All</button>
+<button onclick="filterCat('90s',this)">90s Hits</button>
+<button onclick="filterCat('Marathi',this)">Marathi</button>
+<button onclick="filterCat('Travel',this)">Travel</button>
+</div>
+</div>
 </section>
 
-<main id="grid" class="grid">
-  <article class="card" data-cat="90s" data-name="90s Bollywood Hits">
-    <div class="cover">🎧</div><h3>90s Bollywood Hits</h3><p>Add your own licensed audio files here.</p>
-    <button class="play" onclick="showPlayer('90s Bollywood Hits')">▶ Play Playlist</button>
-  </article>
-  <article class="card" data-cat="Marathi" data-name="Marathi Hits">
-    <div class="cover">🎶</div><h3>Marathi Hits</h3><p>Add your own licensed audio files here.</p>
-    <button class="play" onclick="showPlayer('Marathi Hits')">▶ Play Playlist</button>
-  </article>
-  <article class="card" data-cat="Travel" data-name="Travel / Bus Vibes">
-    <div class="cover">🚌</div><h3>Travel / Bus Vibes</h3><p>Perfect section for your original travel playlist.</p>
-    <button class="play" onclick="showPlayer('Travel / Bus Vibes')">▶ Play Playlist</button>
-  </article>
-  <article class="card" data-cat="Travel" data-name="NG Brothers Special">
-    <div class="cover">⭐</div><h3>NG Brothers Special</h3><p>Your custom featured playlist.</p>
-    <button class="play" onclick="showPlayer('NG Brothers Special')">▶ Play Playlist</button>
-  </article>
-</main>
-
-<div id="player" class="player">
-  <strong id="now">NG BROTHERS MUSIC</strong>
-  <small>Playlist selected — connect your licensed audio files to enable playback.</small>
+<section class="section">
+<div class="title"><h2>🔥 Featured Playlists</h2><small>NG BROTHERS ORIGINAL</small></div>
+<div class="grid">
+<article class="card" data-cat="90s" data-name="90s Bollywood Hits"><div class="cover">🎧</div><h3>90s Bollywood Hits</h3><p>Classic travel-friendly playlist.</p><button class="play" onclick="play('90s Bollywood Hits')">▶ PLAY</button></article>
+<article class="card" data-cat="Marathi" data-name="Marathi Hits"><div class="cover">🎶</div><h3>Marathi Hits</h3><p>Marathi songs for your journey.</p><button class="play" onclick="play('Marathi Hits')">▶ PLAY</button></article>
+<article class="card" data-cat="Travel" data-name="Bus Travel Vibes"><div class="cover">🚌</div><h3>Bus Travel Vibes</h3><p>Road-trip mood, NG Brothers style.</p><button class="play" onclick="play('Bus Travel Vibes')">▶ PLAY</button></article>
+<article class="card" data-cat="Travel" data-name="NG Brothers Special"><div class="cover">⭐</div><h3>NG Brothers Special</h3><p>Your featured custom playlist.</p><button class="play" onclick="play('NG Brothers Special')">▶ PLAY</button></article>
 </div>
+</section>
 
-<footer>© 2026 NG BROTHERS MUSIC • Original website</footer>
+<div class="player" id="player"><div class="playerRow"><div class="dot">▶</div><div><strong id="now">NG BROTHERS MUSIC</strong><small> Playlist selected — audio can be connected in the next step.</small></div></div></div>
+<footer>© 2026 NG BROTHERS MUSIC • Built for mobile & laptop</footer>
 
 <script>
 let category='all';
-function filterCards(){
- const q=document.getElementById('search').value.toLowerCase();
- document.querySelectorAll('.card').forEach(c=>{
-   const okCat=category==='all'||c.dataset.cat===category;
-   const okText=c.dataset.name.toLowerCase().includes(q);
-   c.style.display=okCat&&okText?'block':'none';
- });
-}
-function filterCat(cat,btn){
- category=cat;
- document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
- btn.classList.add('active'); filterCards();
-}
-function showPlayer(name){
- document.getElementById('now').textContent='▶ '+name;
- document.getElementById('player').style.display='block';
-}
+function filterCards(){const q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=(category==='all'||c.dataset.cat===category)&&c.dataset.name.toLowerCase().includes(q)?'block':'none'})}
+function filterCat(cat,b){category=cat;document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');filterCards()}
+function play(n){document.getElementById('now').textContent='▶ '+n;document.getElementById('player').style.display='block'}
 </script>
 </body>
 </html>
