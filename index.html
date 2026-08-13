@@ -1,52 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="mr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>NG BROTHERS MUSIC</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NG BROTHERS KIRANA & GENERAL STORE</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#07090d;color:#fff;font-family:Arial,Helvetica,sans-serif;padding-bottom:105px}
-header{position:sticky;top:0;z-index:10;background:rgba(7,9,13,.95);backdrop-filter:blur(12px);border-bottom:1px solid #272c36}
-.nav{max-width:1150px;margin:auto;padding:15px 18px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;color:#ffd43b;letter-spacing:1px}.badge{font-size:11px;color:#aeb5c4;border:1px solid #303644;padding:7px 10px;border-radius:20px}
-.hero{max-width:1150px;margin:auto;padding:30px 18px 18px}.heroBox{background:radial-gradient(circle at 50% 0,#252c3d,#0d1017 62%);border:1px solid #303644;border-radius:25px;padding:32px 20px;text-align:center;position:relative;overflow:hidden}.heroBox:after{content:"🚌";position:absolute;right:-8px;bottom:-30px;font-size:110px;opacity:.08}
-.kicker{color:#ffd43b;font-size:12px;font-weight:800;letter-spacing:2px}h1{font-size:clamp(38px,9vw,70px);line-height:.98;margin:12px 0}h1 span{color:#ffd43b}.hero p{color:#aab2c1}.search{width:min(700px,100%);padding:14px 17px;border-radius:28px;border:1px solid #343a49;background:#151923;color:#fff;outline:none}.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}.tabs button{padding:9px 14px;border-radius:20px;border:1px solid #343a49;background:#151923;color:#ddd}.tabs button.active{background:#ffd43b;color:#111;border-color:#ffd43b}
-.section{max-width:1150px;margin:auto;padding:10px 18px 35px}.heading{display:flex;justify-content:space-between;align-items:center}.heading h2{font-size:23px}.heading small{color:#7f8898}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.card{background:linear-gradient(180deg,#151923,#10131a);border:1px solid #2c3240;border-radius:19px;padding:14px}.cover{height:145px;border-radius:14px;background:linear-gradient(135deg,#252c3d,#11141b);display:grid;place-items:center;font-size:55px}.card h3{margin:12px 2px 4px}.card p{margin:0 2px 12px;color:#8f97a8;font-size:13px}.play{width:100%;padding:11px;border:0;border-radius:11px;background:#ffd43b;color:#111;font-weight:900}
-.player{position:fixed;left:10px;right:10px;bottom:10px;z-index:20;background:#171b25;border:1px solid #3a4150;border-radius:18px;padding:13px 14px;box-shadow:0 15px 45px #000b}.track{display:flex;align-items:center;gap:12px}.disc{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:#ffd43b;color:#111;font-size:20px}.meta{flex:1;min-width:0}.meta strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta small{color:#8f98a9}.controls{display:flex;align-items:center;gap:8px;margin-top:10px}.controls button{border:1px solid #343a49;background:#11151d;color:#fff;border-radius:10px;padding:8px 11px}.controls .main{background:#ffd43b;color:#111;border-color:#ffd43b}.bar{height:5px;background:#333947;border-radius:5px;flex:1}.note{font-size:11px;color:#737d8e;text-align:center;margin-top:6px}footer{text-align:center;padding:25px;color:#6e7788;border-top:1px solid #202531;font-size:12px}
+*{box-sizing:border-box}body{margin:0;background:#07090d;color:#fff;font-family:Arial,sans-serif;padding-bottom:100px}
+header{background:#080a0e;border-bottom:1px solid #30343d;position:sticky;top:0;z-index:5}.nav{max-width:1100px;margin:auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:center}.brand{font-size:20px;font-weight:900}.brand span{color:#ffd43b}.sub{display:block;color:#ffd43b;font-size:10px;letter-spacing:1px}.pill{border:1px solid #ffd43b;color:#ffd43b;border-radius:20px;padding:8px 12px;font-size:12px}
+.wrap{max-width:1100px;margin:auto;padding:16px}.hero{border-radius:22px;overflow:hidden;border:1px solid #343b48;background:#11151d}.hero img{width:100%;display:block;height:auto}.intro{text-align:center;padding:22px}.intro h1{margin:0 0 8px;font-size:34px}.intro h1 span{color:#ffd43b}.intro p{color:#aeb5c4}
+h2{font-size:23px;margin:25px 0 14px}.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}.service{padding:17px 12px;text-align:center;background:#141923;border:1px solid #2d3442;border-radius:16px}.ico{font-size:30px}.service b{display:block;margin-top:7px}.service small{color:#8f98a8}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.product{padding:18px 10px;text-align:center;border-radius:16px;background:#181d27;border:1px solid #303746}.product div{font-size:38px}.product b{color:#ffd43b}
+.music{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}.music .card{background:#141923;border:1px solid #303746;border-radius:16px;padding:15px}.cover{height:100px;border-radius:12px;background:linear-gradient(135deg,#2d3545,#11151d);display:grid;place-items:center;font-size:44px}.card h3{margin:11px 0 4px}.card p{margin:0;color:#8f98a8;font-size:12px}.play{margin-top:12px;width:100%;border:0;border-radius:10px;padding:10px;background:#ffd43b;font-weight:900}
+.player{position:fixed;left:10px;right:10px;bottom:10px;background:#171c25;border:1px solid #3c4350;border-radius:18px;padding:12px 15px;display:flex;align-items:center;gap:12px;z-index:10}.disc{width:44px;height:44px;border-radius:12px;background:#ffd43b;color:#111;display:grid;place-items:center;font-size:22px}.meta{flex:1}.meta b{display:block}.meta small{color:#8f98a8}.controls button{border:1px solid #3b4350;background:#10141b;color:#fff;border-radius:9px;padding:8px 10px}.controls .main{background:#ffd43b;color:#111}
+footer{text-align:center;color:#70798a;padding:25px 10px;font-size:12px}
 </style>
 </head>
 <body>
-<header><div class="nav"><div class="brand">NG BROTHERS MUSIC</div><div class="badge">🎧 PLAYER</div></div></header>
+<header><div class="nav"><div class="brand">🛒 NG <span>BROTHERS</span><small class="sub">KIRANA & GENERAL STORE</small></div><div class="pill">🎧 MUSIC</div></div></header>
+<div class="wrap">
+<section class="hero"><img src="shop.png" alt="NG Brothers Kirana & General Store"></section>
+<section class="intro"><h1>NG BROTHERS <span>KIRANA & GENERAL STORE</span></h1><p>आपले विश्वासाचे ठिकाण • चांगली गुणवत्ता • योग्य दर</p></section>
 
-<section class="hero"><div class="heroBox">
-<div class="kicker">WELCOME TO</div><h1>NG BROTHERS<br><span>MUSIC</span></h1>
-<p>Bus • Travel • 90s • Marathi — your own music corner.</p>
-<input class="search" id="search" placeholder="🔎 Search playlist..." oninput="filterCards()">
-<div class="tabs"><button class="active" onclick="filterCat('all',this)">All</button><button onclick="filterCat('90s',this)">90s Hits</button><button onclick="filterCat('Marathi',this)">Marathi</button><button onclick="filterCat('Travel',this)">Travel</button></div>
-</div></section>
-
-<section class="section"><div class="heading"><h2>🎵 Playlists</h2><small>STEP 2 PLAYER</small></div>
-<div class="grid">
-<article class="card" data-cat="90s" data-name="90s Bollywood Hits"><div class="cover">🎧</div><h3>90s Bollywood Hits</h3><p>Playlist ready for your audio files.</p><button class="play" onclick="selectTrack('90s Bollywood Hits')">▶ PLAY</button></article>
-<article class="card" data-cat="Marathi" data-name="Marathi Hits"><div class="cover">🎶</div><h3>Marathi Hits</h3><p>Playlist ready for your audio files.</p><button class="play" onclick="selectTrack('Marathi Hits')">▶ PLAY</button></article>
-<article class="card" data-cat="Travel" data-name="Bus Travel Vibes"><div class="cover">🚌</div><h3>Bus Travel Vibes</h3><p>Road-trip playlist section.</p><button class="play" onclick="selectTrack('Bus Travel Vibes')">▶ PLAY</button></article>
-<article class="card" data-cat="Travel" data-name="NG Brothers Special"><div class="cover">⭐</div><h3>NG Brothers Special</h3><p>Your featured playlist.</p><button class="play" onclick="selectTrack('NG Brothers Special')">▶ PLAY</button></article>
-</div></section>
-
-<div class="player">
-<div class="track"><div class="disc">♫</div><div class="meta"><strong id="now">NG BROTHERS MUSIC</strong><small id="status">No audio connected yet</small></div></div>
-<div class="controls"><button onclick="prev()">⏮</button><button class="main" onclick="toggle()">▶ / ⏸</button><button onclick="next()">⏭</button><div class="bar"></div></div>
-<div class="note">Player controls are ready. Licensed audio files can be connected next.</div>
+<h2>🧾 आमच्या सेवा</h2>
+<div class="services">
+<div class="service"><div class="ico">📱</div><b>Mobile Recharge</b><small>सर्व कंपन्यांचे रिचार्ज</small></div>
+<div class="service"><div class="ico">⚡</div><b>Electricity Bill</b><small>वीज बिल भरणा</small></div>
+<div class="service"><div class="ico">💸</div><b>Money Transfer</b><small>सुरक्षित पैसे पाठवा</small></div>
+<div class="service"><div class="ico">👆</div><b>AEPS</b><small>Cash Withdrawal</small></div>
+<div class="service"><div class="ico">🪪</div><b>PAN Card</b><small>Online Service</small></div>
+<div class="service"><div class="ico">💻</div><b>Online Services</b><small>विविध ऑनलाइन कामे</small></div>
 </div>
-<footer>© 2026 NG BROTHERS MUSIC • Built for mobile & laptop</footer>
 
+<h2>🛒 किराणा सामान</h2>
+<div class="products">
+<div class="product"><div>🌾</div><b>धान्य</b></div><div class="product"><div>🫙</div><b>तेल</b></div><div class="product"><div>🥜</div><b>डाळी</b></div><div class="product"><div>🍪</div><b>बिस्किटे</b></div><div class="product"><div>🧼</div><b>स्वच्छता साहित्य</b></div><div class="product"><div>🥤</div><b>थंड पेये</b></div><div class="product"><div>🍫</div><b>चॉकलेट्स</b></div>
+</div>
+
+<h2>🎵 Music Playlists</h2>
+<div class="music">
+<div class="card"><div class="cover">💿</div><h3>90s Hits</h3><p>Old is Gold</p><button class="play" onclick="select('90s Hits')">▶ PLAY</button></div>
+<div class="card"><div class="cover">🎶</div><h3>Marathi Hits</h3><p>Marathi Music</p><button class="play" onclick="select('Marathi Hits')">▶ PLAY</button></div>
+<div class="card"><div class="cover">🎤</div><h3>Evergreen Hits</h3><p>Timeless Classics</p><button class="play" onclick="select('Evergreen Hits')">▶ PLAY</button></div>
+<div class="card"><div class="cover">⭐</div><h3>NG Brothers Special</h3><p>Featured Playlist</p><button class="play" onclick="select('NG Brothers Special')">▶ PLAY</button></div>
+</div>
+</div>
+<div class="player"><div class="disc">🎧</div><div class="meta"><b id="now">NG BROTHERS MUSIC</b><small id="status">No audio connected yet</small></div><div class="controls"><button>⏮</button><button class="main" onclick="play()">▶</button><button>⏭</button></div></div>
+<footer>© 2026 NG BROTHERS KIRANA & GENERAL STORE • NG BROTHERS MUSIC</footer>
 <script>
-const tracks=['90s Bollywood Hits','Marathi Hits','Bus Travel Vibes','NG Brothers Special'];let current=0;
-function selectTrack(name){current=tracks.indexOf(name);document.getElementById('now').textContent='🎵 '+name;document.getElementById('status').textContent='Selected — audio file not connected yet'}
-function toggle(){document.getElementById('status').textContent='Player ready — add an audio file to enable playback'}
-function prev(){current=(current-1+tracks.length)%tracks.length;selectTrack(tracks[current])}
-function next(){current=(current+1)%tracks.length;selectTrack(tracks[current])}
-function filterCards(){let q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.dataset.name.toLowerCase().includes(q)?'block':'none')}
-function filterCat(cat,b){document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.card').forEach(c=>c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none')}
+function select(n){document.getElementById('now').textContent='🎵 '+n;document.getElementById('status').textContent='Playlist selected — audio not connected yet'}
+function play(){document.getElementById('status').textContent='Player ready — add your licensed audio files to play'}
 </script>
 </body>
 </html>
