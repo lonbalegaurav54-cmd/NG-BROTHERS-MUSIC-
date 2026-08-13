@@ -4,78 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>NG BROTHERS MUSIC</title>
-<meta name="description" content="NG BROTHERS MUSIC - Travel, Bus & Music Vibes">
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#07090d;color:#fff;font-family:Arial,Helvetica,sans-serif}
-header{position:sticky;top:0;z-index:10;background:rgba(7,9,13,.94);backdrop-filter:blur(12px);border-bottom:1px solid #272b35}
-.nav{max-width:1150px;margin:auto;padding:15px 18px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:900;letter-spacing:1.5px;font-size:21px;color:#ffd43b}
-.badge{font-size:12px;color:#aeb5c4;border:1px solid #303644;border-radius:20px;padding:8px 12px}
-.hero{max-width:1150px;margin:auto;padding:42px 18px 24px}
-.heroBox{position:relative;overflow:hidden;border:1px solid #303542;border-radius:28px;padding:38px 24px;text-align:center;background:radial-gradient(circle at 50% 0,#242a3a,#0e1118 58%,#090b10)}
-.heroBox:before{content:"🚌";position:absolute;font-size:120px;opacity:.08;right:-10px;bottom:-30px;transform:rotate(-5deg)}
-.kicker{color:#ffd43b;font-weight:800;letter-spacing:2px;font-size:13px}
-h1{font-size:clamp(38px,9vw,76px);line-height:.98;margin:13px 0 12px}
-h1 span{color:#ffd43b}
-.hero p{color:#aeb5c4;margin:0 auto 24px;max-width:650px}
-.search{width:min(700px,100%);padding:15px 19px;border-radius:30px;border:1px solid #343a49;background:#151923;color:white;outline:none;font-size:16px}
-.search:focus{border-color:#ffd43b}
-.tabs{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:22px 0 8px}
-.tabs button{border:1px solid #343a49;background:#151923;color:#dfe3eb;border-radius:22px;padding:10px 16px;cursor:pointer}
-.tabs button.active,.tabs button:hover{background:#ffd43b;color:#101216;border-color:#ffd43b}
-.section{max-width:1150px;margin:auto;padding:12px 18px 60px}
-.title{display:flex;justify-content:space-between;align-items:end;margin:18px 0}
-.title h2{margin:0;font-size:24px}.title small{color:#858d9e}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:17px}
-.card{background:linear-gradient(180deg,#151923,#10131a);border:1px solid #2c3240;border-radius:20px;padding:15px;transition:.2s}
-.card:hover{transform:translateY(-4px);border-color:#ffd43b}
-.cover{height:155px;border-radius:15px;background:linear-gradient(135deg,#262d3e,#11141b);display:flex;align-items:center;justify-content:center;font-size:58px;box-shadow:inset 0 0 35px #0005}
-.card h3{margin:14px 2px 5px;font-size:18px}.card p{margin:0 2px 14px;color:#8e96a7;font-size:13px}
-.play{width:100%;padding:12px;border:0;border-radius:12px;background:#ffd43b;color:#111;font-weight:900;cursor:pointer}
-.play:active{transform:scale(.98)}
-.player{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;display:none;background:#171b25;border:1px solid #3b4150;border-radius:18px;padding:14px 16px;box-shadow:0 15px 45px #000b}
-.playerRow{display:flex;align-items:center;gap:12px}.dot{width:42px;height:42px;border-radius:50%;background:#ffd43b;color:#111;display:grid;place-items:center}
-.player strong{display:block}.player small{color:#929aaa}
-footer{text-align:center;padding:28px 18px;color:#70798b;border-top:1px solid #202531;font-size:13px}
+*{box-sizing:border-box}body{margin:0;background:#07090d;color:#fff;font-family:Arial,Helvetica,sans-serif;padding-bottom:105px}
+header{position:sticky;top:0;z-index:10;background:rgba(7,9,13,.95);backdrop-filter:blur(12px);border-bottom:1px solid #272c36}
+.nav{max-width:1150px;margin:auto;padding:15px 18px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:900;color:#ffd43b;letter-spacing:1px}.badge{font-size:11px;color:#aeb5c4;border:1px solid #303644;padding:7px 10px;border-radius:20px}
+.hero{max-width:1150px;margin:auto;padding:30px 18px 18px}.heroBox{background:radial-gradient(circle at 50% 0,#252c3d,#0d1017 62%);border:1px solid #303644;border-radius:25px;padding:32px 20px;text-align:center;position:relative;overflow:hidden}.heroBox:after{content:"🚌";position:absolute;right:-8px;bottom:-30px;font-size:110px;opacity:.08}
+.kicker{color:#ffd43b;font-size:12px;font-weight:800;letter-spacing:2px}h1{font-size:clamp(38px,9vw,70px);line-height:.98;margin:12px 0}h1 span{color:#ffd43b}.hero p{color:#aab2c1}.search{width:min(700px,100%);padding:14px 17px;border-radius:28px;border:1px solid #343a49;background:#151923;color:#fff;outline:none}.tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:18px}.tabs button{padding:9px 14px;border-radius:20px;border:1px solid #343a49;background:#151923;color:#ddd}.tabs button.active{background:#ffd43b;color:#111;border-color:#ffd43b}
+.section{max-width:1150px;margin:auto;padding:10px 18px 35px}.heading{display:flex;justify-content:space-between;align-items:center}.heading h2{font-size:23px}.heading small{color:#7f8898}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px}.card{background:linear-gradient(180deg,#151923,#10131a);border:1px solid #2c3240;border-radius:19px;padding:14px}.cover{height:145px;border-radius:14px;background:linear-gradient(135deg,#252c3d,#11141b);display:grid;place-items:center;font-size:55px}.card h3{margin:12px 2px 4px}.card p{margin:0 2px 12px;color:#8f97a8;font-size:13px}.play{width:100%;padding:11px;border:0;border-radius:11px;background:#ffd43b;color:#111;font-weight:900}
+.player{position:fixed;left:10px;right:10px;bottom:10px;z-index:20;background:#171b25;border:1px solid #3a4150;border-radius:18px;padding:13px 14px;box-shadow:0 15px 45px #000b}.track{display:flex;align-items:center;gap:12px}.disc{width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:#ffd43b;color:#111;font-size:20px}.meta{flex:1;min-width:0}.meta strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta small{color:#8f98a9}.controls{display:flex;align-items:center;gap:8px;margin-top:10px}.controls button{border:1px solid #343a49;background:#11151d;color:#fff;border-radius:10px;padding:8px 11px}.controls .main{background:#ffd43b;color:#111;border-color:#ffd43b}.bar{height:5px;background:#333947;border-radius:5px;flex:1}.note{font-size:11px;color:#737d8e;text-align:center;margin-top:6px}footer{text-align:center;padding:25px;color:#6e7788;border-top:1px solid #202531;font-size:12px}
 </style>
 </head>
 <body>
-<header><div class="nav"><div class="brand">NG BROTHERS MUSIC</div><div class="badge">🎧 TRAVEL VIBES</div></div></header>
+<header><div class="nav"><div class="brand">NG BROTHERS MUSIC</div><div class="badge">🎧 PLAYER</div></div></header>
 
-<section class="hero">
-<div class="heroBox">
-<div class="kicker">WELCOME TO</div>
-<h1>NG BROTHERS<br><span>MUSIC</span></h1>
+<section class="hero"><div class="heroBox">
+<div class="kicker">WELCOME TO</div><h1>NG BROTHERS<br><span>MUSIC</span></h1>
 <p>Bus • Travel • 90s • Marathi — your own music corner.</p>
-<input id="search" class="search" placeholder="🔎 Search playlist..." oninput="filterCards()">
-<div class="tabs">
-<button class="active" onclick="filterCat('all',this)">All</button>
-<button onclick="filterCat('90s',this)">90s Hits</button>
-<button onclick="filterCat('Marathi',this)">Marathi</button>
-<button onclick="filterCat('Travel',this)">Travel</button>
-</div>
-</div>
-</section>
+<input class="search" id="search" placeholder="🔎 Search playlist..." oninput="filterCards()">
+<div class="tabs"><button class="active" onclick="filterCat('all',this)">All</button><button onclick="filterCat('90s',this)">90s Hits</button><button onclick="filterCat('Marathi',this)">Marathi</button><button onclick="filterCat('Travel',this)">Travel</button></div>
+</div></section>
 
-<section class="section">
-<div class="title"><h2>🔥 Featured Playlists</h2><small>NG BROTHERS ORIGINAL</small></div>
+<section class="section"><div class="heading"><h2>🎵 Playlists</h2><small>STEP 2 PLAYER</small></div>
 <div class="grid">
-<article class="card" data-cat="90s" data-name="90s Bollywood Hits"><div class="cover">🎧</div><h3>90s Bollywood Hits</h3><p>Classic travel-friendly playlist.</p><button class="play" onclick="play('90s Bollywood Hits')">▶ PLAY</button></article>
-<article class="card" data-cat="Marathi" data-name="Marathi Hits"><div class="cover">🎶</div><h3>Marathi Hits</h3><p>Marathi songs for your journey.</p><button class="play" onclick="play('Marathi Hits')">▶ PLAY</button></article>
-<article class="card" data-cat="Travel" data-name="Bus Travel Vibes"><div class="cover">🚌</div><h3>Bus Travel Vibes</h3><p>Road-trip mood, NG Brothers style.</p><button class="play" onclick="play('Bus Travel Vibes')">▶ PLAY</button></article>
-<article class="card" data-cat="Travel" data-name="NG Brothers Special"><div class="cover">⭐</div><h3>NG Brothers Special</h3><p>Your featured custom playlist.</p><button class="play" onclick="play('NG Brothers Special')">▶ PLAY</button></article>
-</div>
-</section>
+<article class="card" data-cat="90s" data-name="90s Bollywood Hits"><div class="cover">🎧</div><h3>90s Bollywood Hits</h3><p>Playlist ready for your audio files.</p><button class="play" onclick="selectTrack('90s Bollywood Hits')">▶ PLAY</button></article>
+<article class="card" data-cat="Marathi" data-name="Marathi Hits"><div class="cover">🎶</div><h3>Marathi Hits</h3><p>Playlist ready for your audio files.</p><button class="play" onclick="selectTrack('Marathi Hits')">▶ PLAY</button></article>
+<article class="card" data-cat="Travel" data-name="Bus Travel Vibes"><div class="cover">🚌</div><h3>Bus Travel Vibes</h3><p>Road-trip playlist section.</p><button class="play" onclick="selectTrack('Bus Travel Vibes')">▶ PLAY</button></article>
+<article class="card" data-cat="Travel" data-name="NG Brothers Special"><div class="cover">⭐</div><h3>NG Brothers Special</h3><p>Your featured playlist.</p><button class="play" onclick="selectTrack('NG Brothers Special')">▶ PLAY</button></article>
+</div></section>
 
-<div class="player" id="player"><div class="playerRow"><div class="dot">▶</div><div><strong id="now">NG BROTHERS MUSIC</strong><small> Playlist selected — audio can be connected in the next step.</small></div></div></div>
+<div class="player">
+<div class="track"><div class="disc">♫</div><div class="meta"><strong id="now">NG BROTHERS MUSIC</strong><small id="status">No audio connected yet</small></div></div>
+<div class="controls"><button onclick="prev()">⏮</button><button class="main" onclick="toggle()">▶ / ⏸</button><button onclick="next()">⏭</button><div class="bar"></div></div>
+<div class="note">Player controls are ready. Licensed audio files can be connected next.</div>
+</div>
 <footer>© 2026 NG BROTHERS MUSIC • Built for mobile & laptop</footer>
 
 <script>
-let category='all';
-function filterCards(){const q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>{c.style.display=(category==='all'||c.dataset.cat===category)&&c.dataset.name.toLowerCase().includes(q)?'block':'none'})}
-function filterCat(cat,b){category=cat;document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');filterCards()}
-function play(n){document.getElementById('now').textContent='▶ '+n;document.getElementById('player').style.display='block'}
+const tracks=['90s Bollywood Hits','Marathi Hits','Bus Travel Vibes','NG Brothers Special'];let current=0;
+function selectTrack(name){current=tracks.indexOf(name);document.getElementById('now').textContent='🎵 '+name;document.getElementById('status').textContent='Selected — audio file not connected yet'}
+function toggle(){document.getElementById('status').textContent='Player ready — add an audio file to enable playback'}
+function prev(){current=(current-1+tracks.length)%tracks.length;selectTrack(tracks[current])}
+function next(){current=(current+1)%tracks.length;selectTrack(tracks[current])}
+function filterCards(){let q=document.getElementById('search').value.toLowerCase();document.querySelectorAll('.card').forEach(c=>c.style.display=c.dataset.name.toLowerCase().includes(q)?'block':'none')}
+function filterCat(cat,b){document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.card').forEach(c=>c.style.display=(cat==='all'||c.dataset.cat===cat)?'block':'none')}
 </script>
 </body>
 </html>
